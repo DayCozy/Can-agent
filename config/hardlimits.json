@@ -1,0 +1,16 @@
+{
+  "coolant_temp": { "min": 70, "max": 115, "unit": "°C", "severity": "critical" },
+  "oil_temp": { "min": 70, "max": 150, "unit": "°C", "severity": "critical" },
+  "oil_pressure": { "min": 1.5, "max": 5.5, "unit": "bar", "severity": "critical" },
+  "rpm": { "min": 0, "max": 7000, "unit": "rpm", "severity": "warning" },
+  "throttle_position": { "min": 0, "max": 100, "unit": "%", "severity": "info" },
+  "vehicle_speed": { "min": 0, "max": 250, "unit": "km/h", "severity": "info" },
+  "intake_air_temp": { "min": -40, "max": 70, "unit": "°C", "severity": "warning" },
+  "maf_rate": { "min": 0, "max": 300, "unit": "g/s", "severity": "info" },
+  "fuel_level": { "min": 0, "max": 100, "unit": "%", "severity": "warning" },
+  "battery_voltage": { "min": 11.5, "max": 15.5, "unit": "V", "severity": "critical" },
+  "lambda_voltage": { "min": 0.1, "max": 0.9, "unit": "V", "severity": "warning" },
+  "timing_advance": { "min": -10, "max": 50, "unit": "°", "severity": "warning" },
+  "engine_load": { "min": 0, "max": 100, "unit": "%", "severity": "warning" },
+  "fuel_pressure": { "min": 0, "max": 650, "unit": "kPa", "severity": "warning" }
+}

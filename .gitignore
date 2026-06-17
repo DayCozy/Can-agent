@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+.env
+data/logs/*.csv
+data/logs/*.db
+data/training/
+models/*.joblib
+config/telegram.json
+*.gguf
+.DS_Store

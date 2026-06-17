@@ -1,0 +1,21 @@
+{
+  "pids": [
+    { "name": "rpm",              "mode": 1, "pid": "0C", "bytes": 2, "formula": "((A*256)+B)/4" },
+    { "name": "coolant_temp",     "mode": 1, "pid": "05", "bytes": 1, "formula": "A-40" },
+    { "name": "oil_temp",         "mode": 1, "pid": "5C", "bytes": 1, "formula": "A-40" },
+    { "name": "vehicle_speed",    "mode": 1, "pid": "0D", "bytes": 1, "formula": "A" },
+    { "name": "throttle_position", "mode": 1, "pid": "11", "bytes": 1, "formula": "A*100/255" },
+    { "name": "engine_load",      "mode": 1, "pid": "04", "bytes": 1, "formula": "A*100/255" },
+    { "name": "fuel_pressure",    "mode": 1, "pid": "0A", "bytes": 1, "formula": "A*3" },
+    { "name": "timing_advance",   "mode": 1, "pid": "0E", "bytes": 1, "formula": "A/2-64" },
+    { "name": "intake_air_temp",  "mode": 1, "pid": "0F", "bytes": 1, "formula": "A-40" },
+    { "name": "maf_rate",         "mode": 1, "pid": "10", "bytes": 2, "formula": "((A*256)+B)*0.01" },
+    { "name": "throttle_position", "mode": 1, "pid": "11", "bytes": 1, "formula": "A*100/255" },
+    { "name": "runtime",          "mode": 1, "pid": "1F", "bytes": 2, "formula": "(A*256)+B" },
+    { "name": "fuel_level",       "mode": 1, "pid": "2F", "bytes": 1, "formula": "A*100/255" },
+    { "name": "battery_voltage",  "mode": 1, "pid": "42", "bytes": 2, "formula": "((A*256)+B)/1000" },
+    { "name": "lambda_voltage",   "mode": 1, "pid": "14", "bytes": 1, "formula": "A*0.005" }
+  ],
+  "poll_interval_ms": 200,
+  "can_bitrate": 500000
+}
