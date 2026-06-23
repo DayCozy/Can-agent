@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "<string>", line 4, in <module>
+    from telegram_bot import main
+  File "/home/kubilay_suhta/.openclaw/workspace/can-agent/telegram_bot.py", line 10
+    from pathlib import None
+                        ^^^^
+SyntaxError: invalid syntax

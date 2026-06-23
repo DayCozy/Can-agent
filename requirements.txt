@@ -1,5 +1,5 @@
 python-can>=4.3.1
-python-obd>=0.7.1
+obd>=0.7.1
 scikit-learn>=1.4.0
 pandas>=2.2.0
 numpy>=1.26.0

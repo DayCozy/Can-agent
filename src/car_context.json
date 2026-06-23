@@ -1,0 +1,20 @@
+{
+  "data": {
+    "rpm": 2121.2181016912796,
+    "coolant_temp": 81.58311236651797,
+    "oil_temp": 86.11980418225193,
+    "vehicle_speed": 61.50433982562972,
+    "throttle_position": 68.05751388038901,
+    "engine_load": 59.505130486762226,
+    "maf_rate": 5.987273278377684,
+    "lambda_voltage": 0.37656643162239817,
+    "intake_air_temp": 24.336051680295384,
+    "fuel_pressure": 304.56189066894643,
+    "battery_voltage": 12.690048147954439,
+    "fuel_level": 90.22943045211083,
+    "runtime": 20,
+    "timing_advance": 46.26430976677754
+  },
+  "anomaly_score": 0.7290826555222998,
+  "engine_state": "on"
+}

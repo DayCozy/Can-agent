@@ -1,11 +1,13 @@
-"""
-Hardlimit-Monitor – prüft Schwellwerte und löst sofortige Alarme aus
+"""Hardlimit-Monitor – prüft Schwellwerte und löst sofortige Alarme aus
+Nur aktiv wenn der Motor wirklich läuft (nicht OFF/STARTING).
 """
 
 import logging
 from typing import TypedDict
+from src.analytics.engine_state import EngineState
 
 log = logging.getLogger("hardlimit")
+
 
 class HardlimitAlert(TypedDict):
     parameter: str
@@ -15,11 +17,16 @@ class HardlimitAlert(TypedDict):
     unit: str
     severity: str
 
+
 class HardlimitMonitor:
     def __init__(self, limits: dict):
         self.limits = limits
 
-    def check(self, data: dict) -> list[HardlimitAlert]:
+    def check(self, data: dict, engine_state: EngineState) -> list[HardlimitAlert]:
+        # Erst wenn der Motor wirklich an ist: keine Alarme wenn OFF oder STARTING
+        if engine_state != EngineState.ON:
+            return []
+
         alerts = []
         for param, cfg in self.limits.items():
             val = data.get(param)

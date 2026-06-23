@@ -1,0 +1,50 @@
+2026-06-23 19:01:11,361 [INFO] can-agent: Using MOCK OBD reader
+2026-06-23 19:01:11,385 [INFO] anomaly: Modell geladen: models/isolation_forest.joblib
+2026-06-23 19:01:11,386 [INFO] telegram: Telegram-Bot aktiv
+2026-06-23 19:01:11,387 [INFO] engine_state: Engine-State-Machine initialisiert (OFF)
+2026-06-23 19:01:11,387 [INFO] can-agent: CAN-Agent initialisiert
+2026-06-23 19:01:11,387 [INFO] can-agent: CAN-Agent gestartet
+2026-06-23 19:01:11,561 [INFO] engine_state: 🔑 Motor STARTEND (RPM 1542)
+2026-06-23 19:01:26,789 [INFO] engine_state: ✅ Motor AN (Kühlmittel 80°C)
+2026-06-23 19:01:26,798 [WARNING] hardlimit: ⚠️ timing_advance zu hoch: 48.35° (max: 35°)
+2026-06-23 19:01:26,822 [ERROR] telegram: Telegram send failed: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: can't parse entities: Can't find end of the entity starting at byte offset 25
+2026-06-23 19:01:27,030 [WARNING] hardlimit: ⚠️ timing_advance zu hoch: 51.09° (max: 35°)
+2026-06-23 19:01:27,058 [ERROR] telegram: Telegram send failed: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: can't parse entities: Can't find end of the entity starting at byte offset 25
+2026-06-23 19:01:27,271 [WARNING] hardlimit: ⚠️ timing_advance zu hoch: 51.71° (max: 35°)
+2026-06-23 19:01:27,308 [ERROR] telegram: Telegram send failed: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: can't parse entities: Can't find end of the entity starting at byte offset 25
+2026-06-23 19:01:27,521 [WARNING] hardlimit: ⚠️ timing_advance zu hoch: 48.19° (max: 35°)
+2026-06-23 19:01:27,554 [ERROR] telegram: Telegram send failed: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: can't parse entities: Can't find end of the entity starting at byte offset 25
+2026-06-23 19:01:27,766 [WARNING] hardlimit: ⚠️ timing_advance zu hoch: 52.24° (max: 35°)
+2026-06-23 19:01:27,868 [ERROR] telegram: Telegram send failed: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: can't parse entities: Can't find end of the entity starting at byte offset 25
+2026-06-23 19:01:28,077 [WARNING] hardlimit: ⚠️ timing_advance zu hoch: 51.46° (max: 35°)
+2026-06-23 19:01:28,109 [ERROR] telegram: Telegram send failed: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: can't parse entities: Can't find end of the entity starting at byte offset 25
+2026-06-23 19:01:28,317 [WARNING] hardlimit: ⚠️ timing_advance zu hoch: 49.28° (max: 35°)
+2026-06-23 19:01:28,343 [ERROR] telegram: Telegram send failed: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: can't parse entities: Can't find end of the entity starting at byte offset 25
+2026-06-23 19:01:28,552 [WARNING] hardlimit: ⚠️ timing_advance zu hoch: 47.89° (max: 35°)
+2026-06-23 19:01:28,579 [ERROR] telegram: Telegram send failed: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: can't parse entities: Can't find end of the entity starting at byte offset 25
+2026-06-23 19:01:28,791 [WARNING] hardlimit: ⚠️ timing_advance zu hoch: 51.11° (max: 35°)
+2026-06-23 19:01:28,846 [ERROR] telegram: Telegram send failed: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: can't parse entities: Can't find end of the entity starting at byte offset 25
+2026-06-23 19:01:29,055 [WARNING] hardlimit: ⚠️ timing_advance zu hoch: 48.95° (max: 35°)
+2026-06-23 19:01:29,084 [ERROR] telegram: Telegram send failed: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: can't parse entities: Can't find end of the entity starting at byte offset 25
+2026-06-23 19:01:29,293 [WARNING] hardlimit: ⚠️ timing_advance zu hoch: 46.92° (max: 35°)
+2026-06-23 19:01:29,319 [ERROR] telegram: Telegram send failed: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: can't parse entities: Can't find end of the entity starting at byte offset 25
+2026-06-23 19:01:29,533 [WARNING] hardlimit: ⚠️ timing_advance zu hoch: 48.99° (max: 35°)
+2026-06-23 19:01:29,559 [ERROR] telegram: Telegram send failed: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: can't parse entities: Can't find end of the entity starting at byte offset 25
+2026-06-23 19:01:29,772 [WARNING] hardlimit: ⚠️ timing_advance zu hoch: 46.77° (max: 35°)
+2026-06-23 19:01:29,802 [ERROR] telegram: Telegram send failed: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: can't parse entities: Can't find end of the entity starting at byte offset 25
+2026-06-23 19:01:30,016 [WARNING] hardlimit: ⚠️ timing_advance zu hoch: 50.84° (max: 35°)
+2026-06-23 19:01:30,056 [ERROR] telegram: Telegram send failed: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: can't parse entities: Can't find end of the entity starting at byte offset 25
+2026-06-23 19:01:30,267 [WARNING] hardlimit: ⚠️ timing_advance zu hoch: 49.62° (max: 35°)
+2026-06-23 19:01:30,294 [ERROR] telegram: Telegram send failed: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: can't parse entities: Can't find end of the entity starting at byte offset 25
+2026-06-23 19:01:30,507 [WARNING] hardlimit: ⚠️ timing_advance zu hoch: 48.53° (max: 35°)
+2026-06-23 19:01:30,539 [ERROR] telegram: Telegram send failed: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: can't parse entities: Can't find end of the entity starting at byte offset 25
+2026-06-23 19:01:30,751 [WARNING] hardlimit: ⚠️ timing_advance zu hoch: 50.60° (max: 35°)
+2026-06-23 19:01:30,778 [ERROR] telegram: Telegram send failed: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: can't parse entities: Can't find end of the entity starting at byte offset 25
+2026-06-23 19:01:30,991 [WARNING] hardlimit: ⚠️ timing_advance zu hoch: 48.77° (max: 35°)
+2026-06-23 19:01:31,024 [ERROR] telegram: Telegram send failed: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: can't parse entities: Can't find end of the entity starting at byte offset 25
+2026-06-23 19:01:31,232 [WARNING] hardlimit: ⚠️ timing_advance zu hoch: 48.70° (max: 35°)
+2026-06-23 19:01:31,255 [ERROR] telegram: Telegram send failed: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: can't parse entities: Can't find end of the entity starting at byte offset 25
+2026-06-23 19:01:31,468 [WARNING] hardlimit: ⚠️ timing_advance zu hoch: 48.18° (max: 35°)
+2026-06-23 19:01:31,499 [ERROR] telegram: Telegram send failed: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: can't parse entities: Can't find end of the entity starting at byte offset 25
+2026-06-23 19:01:31,711 [WARNING] hardlimit: ⚠️ timing_advance zu hoch: 46.26° (max: 35°)
+2026-06-23 19:01:31,737 [ERROR] telegram: Telegram send failed: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: can't parse entities: Can't find end of the entity starting at byte offset 25
