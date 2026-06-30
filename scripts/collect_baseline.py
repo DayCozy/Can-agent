@@ -1,60 +1,50 @@
 #!/usr/bin/env python3
 """
-Collect Baseline Data – sammelt Fahrdaten für Isolation Forest Training
+Trainiert das Isolation Forest Modell auf Baseline-Daten
 """
-import time
-import json
+
+import argparse
 import logging
-from datetime import datetime
-from pathlib import Path
 
-from src.can_interface.obd_reader import OBDReader
+log = logging.getLogger("train")
 
-logging.basicConfig(level=logging.INFO)
-log = logging.getLogger("collect")
 
-def collect(duration_min: int = 30, output_path: str = "data/training/baseline.csv"):
-    with open("config/obd_pids.json") as f:
-        cfg = json.load(f)
+def train(input_csv: str = "data/training/baseline.csv",
+          output_model: str = "models/isolation_forest.joblib",
+          contamination: float = 0.05):
+    from src.analytics.anomaly_detector import AnomalyTrainer
+    AnomalyTrainer.train_from_csv(input_csv, output_model, contamination)
+    log.info(f"Training abgeschlossen. Modell: {output_model}")
 
-    reader = OBDReader(cfg)
-    reader.connect()
 
-    out_path = Path(output_path)
-    out_path.parent.mkdir(parents=True, exist_ok=True)
+def build_parser():
+    parser = argparse.ArgumentParser(
+        description="Trainiert das Isolation-Forest-Modell auf Baseline-Daten."
+    )
+    parser.add_argument(
+        "--input",
+        default="data/training/baseline.csv",
+        help="Pfad zur Baseline-CSV."
+    )
+    parser.add_argument(
+        "--output",
+        default="models/isolation_forest.joblib",
+        help="Zielpfad für das trainierte Modell."
+    )
+    parser.add_argument(
+        "--contamination",
+        type=float,
+        default=0.05,
+        help="Erwarteter Anteil an Anomalien (0.0 bis 1.0)."
+    )
+    return parser
 
-    import csv
-    fieldnames = ["timestamp", "rpm", "coolant_temp", "oil_temp", "vehicle_speed",
-                  "throttle_position", "engine_load", "maf_rate", "lambda_voltage",
-                  "intake_air_temp", "fuel_pressure", "fuel_level", "battery_voltage"]
 
-    with open(out_path, "w", newline="") as f:
-        writer = csv.DictWriter(f, fieldnames=fieldnames)
-        writer.writeheader()
+def main():
+    logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s")
+    args = build_parser().parse_args()
+    train(args.input, args.output, args.contamination)
 
-        end_time = time.time() + duration_min * 60
-        count = 0
-
-        log.info(f"Sammle Baseline-Daten für {duration_min} Minuten...")
-        while time.time() < end_time:
-            data = reader.read_all_pids()
-            if data:
-                row = {"timestamp": datetime.now().isoformat()}
-                row.update(data)
-                writer.writerow(row)
-                count += 1
-                if count % 50 == 0:
-                    log.info(f"  {count} Samples gesammelt...")
-
-            time.sleep(0.2)
-
-    reader.disconnect()
-    log.info(f"Fertig! {count} Samples in {out_path} gespeichert.")
 
 if __name__ == "__main__":
-    import argparse
-    parser = argparse.ArgumentParser()
-    parser.add_argument("--minutes", type=int, default=30, help="Sammel-Dauer in Minuten")
-    parser.add_argument("--output", default="data/training/baseline.csv")
-    args = parser.parse_args()
-    collect(args.minutes, args.output)
+    main()

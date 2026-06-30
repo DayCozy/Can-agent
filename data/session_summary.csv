@@ -1,0 +1,6 @@
+session,rows,rpm_min,rpm_max,rpm_med,coolant_temp_min,coolant_temp_max,coolant_temp_med,vehicle_speed_min,vehicle_speed_max,vehicle_speed_med,throttle_position_min,throttle_position_max,throttle_position_med,engine_load_min,engine_load_max,engine_load_med,maf_rate_min,maf_rate_max,maf_rate_med
+session_20260622_194144.csv,32,0.0,867.0,747.0,75.0,78.0,77.0,0.0,11.0,0.0,14.1,29.4,14.9,0.0,29.0,26.7,0.0,4.2,3.9
+session_20260622_194323.csv,147,80.8,2188.0,751.0,79.0,94.0,88.0,0.0,0.0,0.0,14.1,18.0,14.7,11.4,31.8,25.1,2.6,9.9,3.8
+session_20260622_210145.csv,133,0.0,2253.0,753.0,67.0,81.0,72.0,0.0,0.0,0.0,13.7,18.4,14.5,0.0,28.2,25.9,0.0,10.0,3.8
+session_20260622_211358.csv,60,0.0,883.0,750.0,79.0,83.0,81.0,0.0,0.0,0.0,14.1,28.6,14.9,0.0,81.2,27.1,0.0,4.1,3.9
+session_20260622_212044.csv,285,0.0,2597.0,771.0,81.0,94.0,90.0,0.0,49.0,1.0,12.2,87.1,15.3,0.0,99.2,29.8,0.0,66.8,4.7

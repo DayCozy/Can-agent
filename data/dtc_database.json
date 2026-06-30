@@ -1,0 +1,645 @@
+{
+  "_meta": {
+    "version": "1.1",
+    "last_updated": "2026-06-29",
+    "source": "SAE J2012 / ISO 15031-6"
+  },
+  "codes": {
+    "P0000": {
+      "description": "No fault",
+      "category": "Generic",
+      "severity": "info",
+      "typical_causes": ["Kein Fehler gespeichert", "Diagnosesystem OK"]
+    },
+    "P0010": {
+      "description": "Intake Camshaft Position Actuator Circuit Bank 1",
+      "category": "Variable Valve Timing",
+      "severity": "warning",
+      "typical_causes": ["VVT-Magnetventil defekt", "Kabelbruch", "Ölmangel oder falsches Öl"]
+    },
+    "P0011": {
+      "description": "Intake Camshaft Position Timing Over-Advanced Bank 1",
+      "category": "Variable Valve Timing",
+      "severity": "warning",
+      "typical_causes": ["VVT-Verstellung zu weit vorgestellt", "Verschmutzter Ölkanal", "Defektes Magnetventil"]
+    },
+    "P0012": {
+      "description": "Intake Camshaft Position Timing Over-Retarded Bank 1",
+      "category": "Variable Valve Timing",
+      "severity": "warning",
+      "typical_causes": ["VVT-Verstellung zu weit zurückgestellt", "Ölmangel", "Verschlissene Nockenwelle"]
+    },
+    "P0013": {
+      "description": "Exhaust Camshaft Position Actuator Circuit Bank 1",
+      "category": "Variable Valve Timing",
+      "severity": "warning",
+      "typical_causes": ["Auslass-VVT-Magnetventil defekt", "Kabelbruch", "Kurzschluss"]
+    },
+    "P0014": {
+      "description": "Exhaust Camshaft Position Timing Over-Advanced Bank 1",
+      "category": "Variable Valve Timing",
+      "severity": "warning",
+      "typical_causes": ["Auslass-Nockenwelle zu weit vorgestellt", "Verschmutzter Ölkanal", "Defektes Magnetventil"]
+    },
+    "P0015": {
+      "description": "Exhaust Camshaft Position Timing Over-Retarded Bank 1",
+      "category": "Variable Valve Timing",
+      "severity": "warning",
+      "typical_causes": ["Auslass-Nockenwelle zu weit zurückgestellt", "Ölmangel", "Verschlissene Nockenwelle"]
+    },
+    "P0016": {
+      "description": "Crankshaft/Camshaft Position Correlation Bank 1 Sensor A",
+      "category": "Variable Valve Timing",
+      "severity": "warning",
+      "typical_causes": ["Steuerkettenspiel", "Defekter Kurbelwellen- oder Nockenwellensensor", "Steuerkette verschlissen"]
+    },
+    "P0017": {
+      "description": "Crankshaft/Camshaft Position Correlation Bank 1 Sensor B",
+      "category": "Variable Valve Timing",
+      "severity": "warning",
+      "typical_causes": ["Steuerkette verschlissen", "Defekter Sensor", "VVT-Magnetventil klemmt"]
+    },
+    "P0018": {
+      "description": "Crankshaft/Camshaft Position Correlation Bank 2 Sensor A",
+      "category": "Variable Valve Timing",
+      "severity": "warning",
+      "typical_causes": ["Steuerkette Bank 2 verschlissen", "Defekter Sensor", "Ölmangel"]
+    },
+    "P0019": {
+      "description": "Crankshaft/Camshaft Position Correlation Bank 2 Sensor B",
+      "category": "Variable Valve Timing",
+      "severity": "warning",
+      "typical_causes": ["Steuerkette Bank 2 verschlissen", "Defekter Sensor", "VVT-Magnetventil"]
+    },
+    "P0100": {
+      "description": "Mass or Volume Air Flow Circuit",
+      "category": "Fuel and Air Metering",
+      "severity": "warning",
+      "typical_causes": ["Luftmassenmesser defekt", "Verkabelungsproblem", "Verunreinigter MAF"]
+    },
+    "P0101": {
+      "description": "Mass or Volume Air Flow Circuit Range/Performance",
+      "category": "Fuel and Air Metering",
+      "severity": "warning",
+      "typical_causes": ["Luftmassenmesser außerhalb des Bereichs", "Luftleck nach MAF", "Verschmutzter Luftfilter"]
+    },
+    "P0102": {
+      "description": "Mass or Volume Air Flow Circuit Low Input",
+      "category": "Fuel and Air Metering",
+      "severity": "warning",
+      "typical_causes": ["MAF-Signal zu niedrig", "Kabelbruch", "Verunreinigter Sensor"]
+    },
+    "P0103": {
+      "description": "Mass or Volume Air Flow Circuit High Input",
+      "category": "Fuel and Air Metering",
+      "severity": "warning",
+      "typical_causes": ["MAF-Signal zu hoch", "Kurzschluss", "Defekter Sensor"]
+    },
+    "P0110": {
+      "description": "Intake Air Temperature Sensor Circuit",
+      "category": "Fuel and Air Metering",
+      "severity": "warning",
+      "typical_causes": ["IAT-Sensor defekt", "Kabelbruch", "Kurzschluss"]
+    },
+    "P0111": {
+      "description": "Intake Air Temperature Sensor Circuit Range/Performance",
+      "category": "Fuel and Air Metering",
+      "severity": "warning",
+      "typical_causes": ["IAT-Sensor außerhalb des Bereichs", "Luftleck", "Defekter Sensor"]
+    },
+    "P0112": {
+      "description": "Intake Air Temperature Sensor Circuit Low Input",
+      "category": "Fuel and Air Metering",
+      "severity": "warning",
+      "typical_causes": ["IAT-Signal zu niedrig", "Kurzschluss nach Masse", "Defekter Sensor"]
+    },
+    "P0113": {
+      "description": "Intake Air Temperature Sensor Circuit High Input",
+      "category": "Fuel and Air Metering",
+      "severity": "warning",
+      "typical_causes": ["IAT-Signal zu hoch", "Kabelbruch", "Sensordefekt"]
+    },
+    "P0115": {
+      "description": "Engine Coolant Temperature Sensor Circuit",
+      "category": "Fuel and Air Metering",
+      "severity": "warning",
+      "typical_causes": ["Kühlmitteltemperatursensor defekt", "Kabelbruch", "Kurzschluss"]
+    },
+    "P0116": {
+      "description": "Engine Coolant Temperature Sensor Circuit Range/Performance",
+      "category": "Fuel and Air Metering",
+      "severity": "warning",
+      "typical_causes": ["KTS außerhalb des Bereichs", "Defekter Thermostat", "Luft im Kühlsystem"]
+    },
+    "P0117": {
+      "description": "Engine Coolant Temperature Sensor Circuit Low Input",
+      "category": "Fuel and Air Metering",
+      "severity": "warning",
+      "typical_causes": ["KTS-Signal zu niedrig", "Kurzschluss nach Masse", "Defekter Sensor"]
+    },
+    "P0118": {
+      "description": "Engine Coolant Temperature Sensor Circuit High Input",
+      "category": "Fuel and Air Metering",
+      "severity": "warning",
+      "typical_causes": ["KTS-Signal zu hoch", "Kabelbruch", "Sensordefekt"]
+    },
+    "P0120": {
+      "description": "Throttle/Pedal Position Sensor/Switch A Circuit",
+      "category": "Fuel and Air Metering",
+      "severity": "warning",
+      "typical_causes": ["Gaspedalpositionsensor defekt", "Kabelbruch", "Kurzschluss"]
+    },
+    "P0121": {
+      "description": "Throttle/Pedal Position Sensor/Switch A Circuit Range/Performance",
+      "category": "Fuel and Air Metering",
+      "severity": "warning",
+      "typical_causes": ["TPS außerhalb des Bereichs", "Defekter Sensor", "Verklemmung"]
+    },
+    "P0122": {
+      "description": "Throttle/Pedal Position Sensor/Switch A Circuit Low Input",
+      "category": "Fuel and Air Metering",
+      "severity": "warning",
+      "typical_causes": ["TPS-Signal zu niedrig", "Kurzschluss nach Masse", "Defekter Sensor"]
+    },
+    "P0123": {
+      "description": "Throttle/Pedal Position Sensor/Switch A Circuit High Input",
+      "category": "Fuel and Air Metering",
+      "severity": "warning",
+      "typical_causes": ["TPS-Signal zu hoch", "Kabelbruch", "Sensordefekt"]
+    },
+    "P0128": {
+      "description": "Coolant Temperature Below Thermostat Regulating Temperature",
+      "category": "Fuel and Air Metering",
+      "severity": "warning",
+      "typical_causes": ["Thermostat klemmt offen", "Defekter Kühlmitteltemperatursensor", "Kühlsystem überdimensioniert"]
+    },
+    "P0130": {
+      "description": "O2 Sensor Circuit Bank 1 Sensor 1",
+      "category": "Fuel and Air Metering",
+      "severity": "warning",
+      "typical_causes": ["Lambda-Sensor vor Kat defekt", "Kabelbruch", "Kurzschluss"]
+    },
+    "P0131": {
+      "description": "O2 Sensor Circuit Low Voltage Bank 1 Sensor 1",
+      "category": "Fuel and Air Metering",
+      "severity": "warning",
+      "typical_causes": ["Lambda-Spannung zu niedrig", "Kurzschluss nach Masse", "Vergifteter Sensor"]
+    },
+    "P0132": {
+      "description": "O2 Sensor Circuit High Voltage Bank 1 Sensor 1",
+      "category": "Fuel and Air Metering",
+      "severity": "warning",
+      "typical_causes": ["Lambda-Spannung zu hoch", "Kabelbruch", "Sensordefekt"]
+    },
+    "P0133": {
+      "description": "O2 Sensor Circuit Slow Response Bank 1 Sensor 1",
+      "category": "Fuel and Air Metering",
+      "severity": "warning",
+      "typical_causes": ["Lambda-Sensor langsam", "Alterung", "Verunreinigung durch Öl oder Kraftstoff"]
+    },
+    "P0135": {
+      "description": "O2 Sensor Heater Circuit Bank 1 Sensor 1",
+      "category": "Fuel and Air Metering",
+      "severity": "warning",
+      "typical_causes": ["Lambda-Heizkreis defekt", "Durchgebrannte Sicherung", "Kabelbruch"]
+    },
+    "P0141": {
+      "description": "O2 Sensor Heater Circuit Bank 1 Sensor 2",
+      "category": "Fuel and Air Metering",
+      "severity": "warning",
+      "typical_causes": ["Nachkat-Lambda-Heizkreis defekt", "Sicherung defekt", "Kabelbruch"]
+    },
+    "P0171": {
+      "description": "System Too Lean (Bank 1)",
+      "category": "Fuel and Air Metering",
+      "severity": "warning",
+      "typical_causes": ["Luftleck nach MAF", "Defekter MAF", "Schmutzige Einspritzdüsen", "Niedriger Kraftstoffdruck"]
+    },
+    "P0172": {
+      "description": "System Too Rich (Bank 1)",
+      "category": "Fuel and Air Metering",
+      "severity": "warning",
+      "typical_causes": ["Undichtes Einspritzventil", "Defekter Druckregler", "Verstopfter Luftfilter"]
+    },
+    "P0174": {
+      "description": "System Too Lean (Bank 2)",
+      "category": "Fuel and Air Metering",
+      "severity": "warning",
+      "typical_causes": ["Luftleck Bank 2", "Defekter MAF", "Einspritzdüsen verschmutzt"]
+    },
+    "P0175": {
+      "description": "System Too Rich (Bank 2)",
+      "category": "Fuel and Air Metering",
+      "severity": "warning",
+      "typical_causes": ["Undichtes Einspritzventil Bank 2", "Defekter Druckregler", "Verstopfter Luftfilter"]
+    },
+    "P0195": {
+      "description": "Engine Oil Temperature Sensor Circuit",
+      "category": "Fuel and Air Metering",
+      "severity": "warning",
+      "typical_causes": ["Öltemperatursensor defekt", "Kabelbruch", "Kurzschluss"]
+    },
+    "P0196": {
+      "description": "Engine Oil Temperature Sensor Circuit Range/Performance",
+      "category": "Fuel and Air Metering",
+      "severity": "warning",
+      "typical_causes": ["Öltemperatursensor außerhalb des Bereichs", "Defekter Sensor", "Ölstand zu niedrig"]
+    },
+    "P0197": {
+      "description": "Engine Oil Temperature Sensor Circuit Low Input",
+      "category": "Fuel and Air Metering",
+      "severity": "warning",
+      "typical_causes": ["Öltemperatursensor-Signal zu niedrig", "Kurzschluss nach Masse", "Defekter Sensor"]
+    },
+    "P0198": {
+      "description": "Engine Oil Temperature Sensor Circuit High Input",
+      "category": "Fuel and Air Metering",
+      "severity": "warning",
+      "typical_causes": ["Öltemperatursensor-Signal zu hoch", "Kabelbruch", "Motor überhitzt"]
+    },
+    "P0200": {
+      "description": "Injector Circuit",
+      "category": "Fuel and Air Metering",
+      "severity": "warning",
+      "typical_causes": ["Einspritzventil defekt", "Kabelbruch", "Kurzschluss"]
+    },
+    "P0201": {
+      "description": "Injector Circuit Cylinder 1",
+      "category": "Fuel and Air Metering",
+      "severity": "warning",
+      "typical_causes": ["Einspritzventil Zylinder 1 defekt", "Kabelbruch", "Kurzschluss"]
+    },
+    "P0202": {
+      "description": "Injector Circuit Cylinder 2",
+      "category": "Fuel and Air Metering",
+      "severity": "warning",
+      "typical_causes": ["Einspritzventil Zylinder 2 defekt", "Kabelbruch", "Kurzschluss"]
+    },
+    "P0203": {
+      "description": "Injector Circuit Cylinder 3",
+      "category": "Fuel and Air Metering",
+      "severity": "warning",
+      "typical_causes": ["Einspritzventil Zylinder 3 defekt", "Kabelbruch", "Kurzschluss"]
+    },
+    "P0204": {
+      "description": "Injector Circuit Cylinder 4",
+      "category": "Fuel and Air Metering",
+      "severity": "warning",
+      "typical_causes": ["Einspritzventil Zylinder 4 defekt", "Kabelbruch", "Kurzschluss"]
+    },
+    "P0205": {
+      "description": "Injector Circuit Cylinder 5",
+      "category": "Fuel and Air Metering",
+      "severity": "warning",
+      "typical_causes": ["Einspritzventil Zylinder 5 defekt", "Kabelbruch", "Kurzschluss"]
+    },
+    "P0206": {
+      "description": "Injector Circuit Cylinder 6",
+      "category": "Fuel and Air Metering",
+      "severity": "warning",
+      "typical_causes": ["Einspritzventil Zylinder 6 defekt", "Kabelbruch", "Kurzschluss"]
+    },
+    "P0217": {
+      "description": "Engine Over Temperature Condition",
+      "category": "Fuel and Air Metering",
+      "severity": "critical",
+      "typical_causes": ["Kühlmittelverlust", "Defekte Wasserpumpe", "Verstopfter Kühler", "Defekter Lüfter"]
+    },
+    "P0230": {
+      "description": "Fuel Pump Primary Circuit",
+      "category": "Fuel and Air Metering",
+      "severity": "warning",
+      "typical_causes": ["Kraftstoffpumpe defekt", "Relais defekt", "Sicherung durchgebrannt"]
+    },
+    "P0231": {
+      "description": "Fuel Pump Secondary Circuit Low",
+      "category": "Fuel and Air Metering",
+      "severity": "warning",
+      "typical_causes": ["Kraftstoffpumpen-Signal zu niedrig", "Kabelbruch", "Defektes Relais"]
+    },
+    "P0232": {
+      "description": "Fuel Pump Secondary Circuit High",
+      "category": "Fuel and Air Metering",
+      "severity": "warning",
+      "typical_causes": ["Kraftstoffpumpen-Signal zu hoch", "Kurzschluss", "Defektes Relais"]
+    },
+    "P0261": {
+      "description": "Cylinder 1 Injector Circuit Low",
+      "category": "Fuel and Air Metering",
+      "severity": "warning",
+      "typical_causes": ["Einspritzventil Zylinder 1 Kurzschluss nach Masse", "Kabelbruch", "Defektes ECM"]
+    },
+    "P0262": {
+      "description": "Cylinder 1 Injector Circuit High",
+      "category": "Fuel and Air Metering",
+      "severity": "warning",
+      "typical_causes": ["Einspritzventil Zylinder 1 Kurzschluss nach Plus", "Defektes ECM", "Kabelbruch"]
+    },
+    "P0264": {
+      "description": "Cylinder 2 Injector Circuit Low",
+      "category": "Fuel and Air Metering",
+      "severity": "warning",
+      "typical_causes": ["Einspritzventil Zylinder 2 Kurzschluss nach Masse", "Kabelbruch", "Defektes ECM"]
+    },
+    "P0265": {
+      "description": "Cylinder 2 Injector Circuit High",
+      "category": "Fuel and Air Metering",
+      "severity": "warning",
+      "typical_causes": ["Einspritzventil Zylinder 2 Kurzschluss nach Plus", "Defektes ECM", "Kabelbruch"]
+    },
+    "P0267": {
+      "description": "Cylinder 3 Injector Circuit Low",
+      "category": "Fuel and Air Metering",
+      "severity": "warning",
+      "typical_causes": ["Einspritzventil Zylinder 3 Kurzschluss nach Masse", "Kabelbruch", "Defektes ECM"]
+    },
+    "P0268": {
+      "description": "Cylinder 3 Injector Circuit High",
+      "category": "Fuel and Air Metering",
+      "severity": "warning",
+      "typical_causes": ["Einspritzventil Zylinder 3 Kurzschluss nach Plus", "Defektes ECM", "Kabelbruch"]
+    },
+    "P0270": {
+      "description": "Cylinder 4 Injector Circuit Low",
+      "category": "Fuel and Air Metering",
+      "severity": "warning",
+      "typical_causes": ["Einspritzventil Zylinder 4 Kurzschluss nach Masse", "Kabelbruch", "Defektes ECM"]
+    },
+    "P0271": {
+      "description": "Cylinder 4 Injector Circuit High",
+      "category": "Fuel and Air Metering",
+      "severity": "warning",
+      "typical_causes": ["Einspritzventil Zylinder 4 Kurzschluss nach Plus", "Defektes ECM", "Kabelbruch"]
+    },
+    "P0300": {
+      "description": "Random/Multiple Cylinder Misfire Detected",
+      "category": "Ignition System or Misfire",
+      "severity": "critical",
+      "typical_causes": ["Zündkerzen verschlissen", "Zündspulen defekt", "Kraftstoffdruck zu niedrig", "Vakuumleck"]
+    },
+    "P0301": {
+      "description": "Cylinder 1 Misfire Detected",
+      "category": "Ignition System or Misfire",
+      "severity": "critical",
+      "typical_causes": ["Zündkerze Zylinder 1 defekt", "Zündspule Zylinder 1 defekt", "Einspritzventil oder Kompressionsverlust"]
+    },
+    "P0302": {
+      "description": "Cylinder 2 Misfire Detected",
+      "category": "Ignition System or Misfire",
+      "severity": "critical",
+      "typical_causes": ["Zündkerze Zylinder 2 defekt", "Zündspule Zylinder 2 defekt", "Einspritzventil oder Kompressionsverlust"]
+    },
+    "P0303": {
+      "description": "Cylinder 3 Misfire Detected",
+      "category": "Ignition System or Misfire",
+      "severity": "critical",
+      "typical_causes": ["Zündkerze Zylinder 3 defekt", "Zündspule Zylinder 3 defekt", "Einspritzventil oder Kompressionsverlust"]
+    },
+    "P0304": {
+      "description": "Cylinder 4 Misfire Detected",
+      "category": "Ignition System or Misfire",
+      "severity": "critical",
+      "typical_causes": ["Zündkerze Zylinder 4 defekt", "Zündspule Zylinder 4 defekt", "Einspritzventil oder Kompressionsverlust"]
+    },
+    "P0305": {
+      "description": "Cylinder 5 Misfire Detected",
+      "category": "Ignition System or Misfire",
+      "severity": "critical",
+      "typical_causes": ["Zündkerze Zylinder 5 defekt", "Zündspule Zylinder 5 defekt", "Einspritzventil oder Kompressionsverlust"]
+    },
+    "P0306": {
+      "description": "Cylinder 6 Misfire Detected",
+      "category": "Ignition System or Misfire",
+      "severity": "critical",
+      "typical_causes": ["Zündkerze Zylinder 6 defekt", "Zündspule Zylinder 6 defekt", "Einspritzventil oder Kompressionsverlust"]
+    },
+    "P0307": {
+      "description": "Cylinder 7 Misfire Detected",
+      "category": "Ignition System or Misfire",
+      "severity": "critical",
+      "typical_causes": ["Zündkerze Zylinder 7 defekt", "Zündspule Zylinder 7 defekt", "Einspritzventil oder Kompressionsverlust"]
+    },
+    "P0308": {
+      "description": "Cylinder 8 Misfire Detected",
+      "category": "Ignition System or Misfire",
+      "severity": "critical",
+      "typical_causes": ["Zündkerze Zylinder 8 defekt", "Zündspule Zylinder 8 defekt", "Einspritzventil oder Kompressionsverlust"]
+    },
+    "P0325": {
+      "description": "Knock Sensor Circuit",
+      "category": "Ignition System or Misfire",
+      "severity": "warning",
+      "typical_causes": ["Klopfsensor defekt", "Kabelbruch", "Kurzschluss"]
+    },
+    "P0335": {
+      "description": "Crankshaft Position Sensor A Circuit",
+      "category": "Ignition System or Misfire",
+      "severity": "critical",
+      "typical_causes": ["Kurbelwellensensor defekt", "Kabelbruch", "Sensorlagerung beschädigt"]
+    },
+    "P0340": {
+      "description": "Camshaft Position Sensor A Circuit",
+      "category": "Ignition System or Misfire",
+      "severity": "critical",
+      "typical_causes": ["Nockenwellensensor defekt", "Kabelbruch", "Fehljustierung des Sensors"]
+    },
+    "P0380": {
+      "description": "Glow Plug/Heater Circuit A",
+      "category": "Ignition System or Misfire",
+      "severity": "warning",
+      "typical_causes": ["Glühkerze(n) defekt", "Glühkerzenrelais defekt", "Kabelbruch"]
+    },
+    "P0381": {
+      "description": "Glow Plug/Heater Indicator Circuit",
+      "category": "Ignition System or Misfire",
+      "severity": "info",
+      "typical_causes": ["Glühkontrolllampe defekt", "Kabelbruch", "Defektes Steuergerät"]
+    },
+    "P0382": {
+      "description": "Glow Plug/Heater Circuit B",
+      "category": "Ignition System or Misfire",
+      "severity": "warning",
+      "typical_causes": ["Glühkerze(n) Bank B defekt", "Glühkerzenrelais defekt", "Kabelbruch"]
+    },
+    "P0400": {
+      "description": "Exhaust Gas Recirculation Flow",
+      "category": "Auxiliary Emissions Controls",
+      "severity": "warning",
+      "typical_causes": ["EGR-Ventil verstopft oder defekt", "Vakuumleck", "Elektrikproblem"]
+    },
+    "P0401": {
+      "description": "Exhaust Gas Recirculation Flow Insufficient Detected",
+      "category": "Auxiliary Emissions Controls",
+      "severity": "warning",
+      "typical_causes": ["EGR-Durchfluss zu niedrig", "Verstopfung im EGR-Kanal", "Defektes Ventil"]
+    },
+    "P0420": {
+      "description": "Catalyst System Efficiency Below Threshold (Bank 1)",
+      "category": "Auxiliary Emissions Controls",
+      "severity": "warning",
+      "typical_causes": ["Katalysator Bank 1 erschöpft", "Lambda-Sensor vor/nach Kat defekt", "Abgasleck"]
+    },
+    "P0430": {
+      "description": "Catalyst System Efficiency Below Threshold (Bank 2)",
+      "category": "Auxiliary Emissions Controls",
+      "severity": "warning",
+      "typical_causes": ["Katalysator Bank 2 erschöpft", "Lambda-Sensor vor/nach Kat defekt", "Abgasleck"]
+    },
+    "P0440": {
+      "description": "Evaporative Emission Control System",
+      "category": "Auxiliary Emissions Controls",
+      "severity": "info",
+      "typical_causes": ["Leck im Tanklüftungssystem", "Lockere oder defekte Tankkappe", "Undichtes SVV"]
+    },
+    "P0442": {
+      "description": "Evaporative Emission Control System Leak Detected (small leak)",
+      "category": "Auxiliary Emissions Controls",
+      "severity": "info",
+      "typical_causes": ["Kleines Leck im EVAP-System", "Undichte Schläuche", "Defekte Tankkappe"]
+    },
+    "P0455": {
+      "description": "Evaporative Emission Control System Leak Detected (gross leak)",
+      "category": "Auxiliary Emissions Controls",
+      "severity": "warning",
+      "typical_causes": ["Großes Leck im EVAP-System", "Fehlende oder defekte Tankkappe", "Undichter Schlauch"]
+    },
+    "P0500": {
+      "description": "Vehicle Speed Sensor",
+      "category": "Vehicle Speed Controls and Idle Control",
+      "severity": "warning",
+      "typical_causes": ["Geschwindigkeitssensor defekt", "Kabelbruch", "Kurzschluss"]
+    },
+    "P0505": {
+      "description": "Idle Control System RPM",
+      "category": "Vehicle Speed Controls and Idle Control",
+      "severity": "warning",
+      "typical_causes": ["Leerlaufregelung defekt", "Verklemmte Leerlaufdrossel", "Verschmutzte Drosselklappe"]
+    },
+    "P0521": {
+      "description": "Engine Oil Pressure Sensor/Switch Range/Performance",
+      "category": "Vehicle Speed Controls and Idle Control",
+      "severity": "critical",
+      "typical_causes": ["Öldrucksensor außerhalb des Bereichs", "Ölstand zu niedrig", "Defekte Ölpumpe"]
+    },
+    "P0522": {
+      "description": "Engine Oil Pressure Sensor/Switch Circuit Low Voltage",
+      "category": "Vehicle Speed Controls and Idle Control",
+      "severity": "critical",
+      "typical_causes": ["Öldrucksensor-Signal zu niedrig", "Kurzschluss nach Masse", "Ölmangel"]
+    },
+    "P0523": {
+      "description": "Engine Oil Pressure Sensor/Switch Circuit High Voltage",
+      "category": "Vehicle Speed Controls and Idle Control",
+      "severity": "warning",
+      "typical_causes": ["Öldrucksensor-Signal zu hoch", "Kabelbruch", "Defekter Sensor"]
+    },
+    "P0562": {
+      "description": "System Voltage Low",
+      "category": "Computer Auxiliary Outputs",
+      "severity": "warning",
+      "typical_causes": ["Batteriespannung zu niedrig", "Generatordefekt", "Korrodierte Kontakte"]
+    },
+    "P0563": {
+      "description": "System Voltage High",
+      "category": "Computer Auxiliary Outputs",
+      "severity": "warning",
+      "typical_causes": ["Laderegler defekt", "Generator überlastet", "Batterie überladen"]
+    },
+    "P0600": {
+      "description": "Serial Communication Link",
+      "category": "Computer Auxiliary Outputs",
+      "severity": "warning",
+      "typical_causes": ["CAN-Bus Kommunikationsfehler", "Kabelbruch", "Defektes Steuergerät"]
+    },
+    "P0601": {
+      "description": "Internal Control Module Memory Check Sum Error",
+      "category": "Computer Auxiliary Outputs",
+      "severity": "critical",
+      "typical_causes": ["Steuergerät interner Fehler", "Defektes ECM/PCM", "Spannungsspitze im Bordnetz"]
+    },
+    "P0603": {
+      "description": "Internal Control Module Keep Alive Memory (KAM) Error",
+      "category": "Computer Auxiliary Outputs",
+      "severity": "warning",
+      "typical_causes": ["KAM-Fehler", "Batterie abgeklemmt", "Spannungsunterbrechung"]
+    },
+    "P0605": {
+      "description": "Internal Control Module Read Only Memory (ROM) Error",
+      "category": "Computer Auxiliary Outputs",
+      "severity": "critical",
+      "typical_causes": ["ROM-Fehler im Steuergerät", "Defektes ECM", "Spannungsspitze"]
+    },
+    "P0606": {
+      "description": "Internal Control Module Processor",
+      "category": "Computer Auxiliary Outputs",
+      "severity": "critical",
+      "typical_causes": ["Prozessorfehler im Steuergerät", "Defektes ECM/PCM", "Überhitzung des Steuergeräts"]
+    },
+    "P062F": {
+      "description": "Internal Control Module EEPROM Error",
+      "category": "Computer Auxiliary Outputs",
+      "severity": "warning",
+      "typical_causes": ["EEPROM-Fehler", "Defektes Speichermodul", "Spannungsstoß im Bordnetz"]
+    },
+    "P0700": {
+      "description": "Transmission Control System (MIL Request)",
+      "category": "Transmission",
+      "severity": "warning",
+      "typical_causes": ["Getriebesteuergerät meldet Fehler", "Getriebeöl zu niedrig", "Defektes Schaltventil"]
+    },
+    "P0715": {
+      "description": "Input/Turbine Speed Sensor Circuit",
+      "category": "Transmission",
+      "severity": "warning",
+      "typical_causes": ["Turbinendrehzahlsensor defekt", "Kabelbruch", "Metallspäne im Getriebe"]
+    },
+    "P0720": {
+      "description": "Output Speed Sensor Circuit",
+      "category": "Transmission",
+      "severity": "warning",
+      "typical_causes": ["Ausgangsdrehzahlsensor defekt", "Kabelbruch", "Kurzschluss"]
+    },
+    "P0730": {
+      "description": "Incorrect Gear Ratio",
+      "category": "Transmission",
+      "severity": "warning",
+      "typical_causes": ["Getriebeölstand zu niedrig", "Verschlissene Kupplungsscheiben", "Defektes Schaltventil"]
+    },
+    "P0740": {
+      "description": "Torque Converter Clutch Circuit",
+      "category": "Transmission",
+      "severity": "warning",
+      "typical_causes": ["Wandlerüberbrückungskupplung defekt", "Getriebeöl verschmutzt", "Defektes Magnetventil"]
+    },
+    "U0073": {
+      "description": "Control Module Communication Bus Off",
+      "category": "Vehicle Network",
+      "severity": "warning",
+      "typical_causes": ["CAN-Bus Bus-Off", "Kurzschluss zwischen CAN-High und CAN-Low", "Defektes Steuergerät"]
+    },
+    "U0100": {
+      "description": "Lost Communication with ECM/PCM A",
+      "category": "Vehicle Network",
+      "severity": "critical",
+      "typical_causes": ["Kein Kontakt zum Motorsteuergerät", "CAN-Bus Unterbrechung", "Defektes ECM"]
+    },
+    "U0101": {
+      "description": "Lost Communication with TCM",
+      "category": "Vehicle Network",
+      "severity": "critical",
+      "typical_causes": ["Kein Kontakt zum Getriebesteuergerät", "CAN-Bus Unterbrechung", "Defektes TCM"]
+    },
+    "U0121": {
+      "description": "Lost Communication with Anti-Lock Brake System (ABS) Control Module",
+      "category": "Vehicle Network",
+      "severity": "critical",
+      "typical_causes": ["Kein Kontakt zum ABS-Steuergerät", "CAN-Bus Unterbrechung", "Defektes ABS-Modul"]
+    },
+    "U0155": {
+      "description": "Lost Communication with Instrument Panel Cluster (IPC) Control Module",
+      "category": "Vehicle Network",
+      "severity": "warning",
+      "typical_causes": ["Kein Kontakt zum Kombiinstrument", "CAN-Bus Unterbrechung", "Defektes IPC-Modul"]
+    }
+  }
+}

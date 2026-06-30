@@ -1,0 +1,53 @@
+{
+  "overall": {
+    "rpm": {
+      "count": 656,
+      "min": 0.0,
+      "max": 2597.0,
+      "median": 752.0,
+      "mean": 865.39,
+      "std": 377.0
+    },
+    "coolant_temp": {
+      "count": 656,
+      "min": 67.0,
+      "max": 94.0,
+      "median": 85.0,
+      "mean": 84.2,
+      "std": 7.26
+    },
+    "vehicle_speed": {
+      "count": 656,
+      "min": 0.0,
+      "max": 49.0,
+      "median": 0.0,
+      "mean": 4.7,
+      "std": 10.59
+    },
+    "throttle_position": {
+      "count": 656,
+      "min": 12.16,
+      "max": 87.06,
+      "median": 14.9,
+      "mean": 16.3,
+      "std": 7.1
+    },
+    "engine_load": {
+      "count": 657,
+      "min": 0.0,
+      "max": 99.22,
+      "median": 26.67,
+      "mean": 26.9,
+      "std": 12.13
+    },
+    "maf_rate": {
+      "count": 655,
+      "min": 0.0,
+      "max": 66.81,
+      "median": 3.9,
+      "mean": 5.15,
+      "std": 5.58
+    }
+  },
+  "generated": "2026-06-24T23:32:37.215627"
+}

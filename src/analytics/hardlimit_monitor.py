@@ -1,13 +1,8 @@
-"""Hardlimit-Monitor – prüft Schwellwerte und löst sofortige Alarme aus
-Nur aktiv wenn der Motor wirklich läuft (nicht OFF/STARTING).
-"""
-
 import logging
 from typing import TypedDict
 from src.analytics.engine_state import EngineState
 
 log = logging.getLogger("hardlimit")
-
 
 class HardlimitAlert(TypedDict):
     parameter: str
@@ -17,47 +12,46 @@ class HardlimitAlert(TypedDict):
     unit: str
     severity: str
 
-
 class HardlimitMonitor:
     def __init__(self, limits: dict):
         self.limits = limits
 
     def check(self, data: dict, engine_state: EngineState) -> list[HardlimitAlert]:
-        # Erst wenn der Motor wirklich an ist: keine Alarme wenn OFF oder STARTING
         if engine_state != EngineState.ON:
             return []
 
-        alerts = []
+        alerts: list[HardlimitAlert] = []
         for param, cfg in self.limits.items():
             val = data.get(param)
             if val is None:
                 continue
 
-            lo = cfg["min"]
-            hi = cfg["max"]
-            unit = cfg["unit"]
-            severity = cfg["severity"]
+            try:
+                val = float(val)
+                lo = float(cfg["min"])
+                hi = float(cfg["max"])
+            except (KeyError, TypeError, ValueError):
+                log.warning(f"Ungültige Hardlimit-Config für {param}")
+                continue
 
-            if val < lo:
-                alerts.append(HardlimitAlert(
-                    parameter=param,
-                    value=val,
-                    limit_min=lo,
-                    limit_max=hi,
-                    unit=unit,
-                    severity=severity
-                ))
-                log.warning(f"⚠️ {param} zu niedrig: {val:.2f}{unit} (min: {lo}{unit})")
-            elif val > hi:
-                alerts.append(HardlimitAlert(
-                    parameter=param,
-                    value=val,
-                    limit_min=lo,
-                    limit_max=hi,
-                    unit=unit,
-                    severity=severity
-                ))
-                log.warning(f"⚠️ {param} zu hoch: {val:.2f}{unit} (max: {hi}{unit})")
+            unit = cfg.get("unit", "")
+            severity = cfg.get("severity", "medium")
+
+            if val < lo or val > hi:
+                alert: HardlimitAlert = {
+                    "parameter": param,
+                    "value": val,
+                    "limit_min": lo,
+                    "limit_max": hi,
+                    "unit": unit,
+                    "severity": severity,
+                }
+                alerts.append(alert)
+
+                if val < lo:
+                    log.warning(f"⚠️ {param} zu niedrig: {val:.2f}{unit} (min: {lo}{unit})")
+                else:
+                    log.warning(f"⚠️ {param} zu hoch: {val:.2f}{unit} (max: {hi}{unit})")
 
         return alerts
 
@@ -71,5 +65,4 @@ class HardlimitMonitor:
 
         if v < lo:
             return f"🚨 [{s.upper()}] {p}: {v:.2f}{u} (Minimum: {lo}{u})"
-        else:
-            return f"🚨 [{s.upper()}] {p}: {v:.2f}{u} (Maximum: {hi}{u})"
+        return f"🚨 [{s.upper()}] {p}: {v:.2f}{u} (Maximum: {hi}{u})"
